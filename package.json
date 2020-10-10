@@ -1,0 +1,72 @@
+{
+  "name": "@hello/component-vue",
+  "version": "2.6.0",
+  "description": "the common component and mixins for vue project",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha-webpack -t 5000 --webpack-config webpack.test.js --require test/setup.js",
+    "dev": "npm run serve",
+    "start": "npm run dev",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "eslint src --fix",
+    "component": "webpack --config webpack.component.js",
+    "common": "webpack --config webpack.common.js",
+    "other": "webpack --config webpack.other.js",
+    "dist": "sh scripts/publish.sh",
+    "prepublish": "npm run dist"
+  },
+  "keywords": [
+    "common",
+    "component",
+    "mixin"
+  ],
+  "author": "penganhua@hello.com",
+  "license": "ISC",
+  "files": [
+    "package.json",
+    "lib",
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@hello/regexp": "^1.0.10",
+    "@hello/utils": "^1.1.2",
+    "dayjs": "^1.8.20"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.10.1",
+    "@hello/eslint-config-vue": "^1.0.7",
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^3.4.2",
+    "element-ui": "^2.13.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "jsdom": "^15.2.1",
+    "jsdom-global": "^3.0.2",
+    "lodash": "^4.17.15",
+    "mocha": "^7.2.0",
+    "mocha-webpack": "^2.0.0-beta.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "sinon": "^9.0.2",
+    "style-loader": "^1.1.3",
+    "svg-sprite-loader": "^5.0.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-router": "^3.1.6",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
